@@ -13,7 +13,7 @@ const Modal = () => {
     e.preventDefault();
     if (isModal.title === "Add") {
       try {
-        fetch("http://localhost:1337/api/notes", {
+        fetch("https://fearless-breeze-a96eff0fbb.strapiapp.com/api/notes", {
           method: "POST",
           body: JSON.stringify({
             data: {
@@ -44,7 +44,7 @@ const Modal = () => {
       setIsModal((prev) => ({ ...prev, isActive: false }));
     } else if (isModal.title === "Edit") {
       try {
-        fetch(`http://localhost:1337/api/notes/${isModal.id}`),
+        fetch(`https://fearless-breeze-a96eff0fbb.strapiapp.com/api/notes/${isModal.id}`),
           {
             method: "PUT",
             body: JSON.stringify({
@@ -81,7 +81,7 @@ const Modal = () => {
 
   function fetchData() {
     try {
-      fetch(`http://localhost:1337/api/notes/${isModal.id}`)
+      fetch(`https://fearless-breeze-a96eff0fbb.strapiapp.com/api/notes/${isModal.id}`)
         .then((res) => res.json())
         .then((note) => {
           if (note?.data) {

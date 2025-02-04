@@ -7,7 +7,7 @@ const ModalDel = () => {
 
   const DeleteNote = async () => {
     try {
-      await fetch(`http://localhost:1337/api/notes/${isModalDel.id}`, {
+      await fetch(`https://fearless-breeze-a96eff0fbb.strapiapp.com/api/notes/${isModalDel.id}`, {
         method: "DELETE",
       });
       setIsModalDel({ isActive: false });

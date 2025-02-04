@@ -17,7 +17,7 @@ export const NotesProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:1337/api/notes");
+      const response = await fetch("https://fearless-breeze-a96eff0fbb.strapiapp.com/api/notes");
       const data = await response.json();
       setNotes(data.data);
     } catch (error) {

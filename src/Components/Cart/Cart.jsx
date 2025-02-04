@@ -15,7 +15,7 @@ const Cart = ({
   const { setNotes, notes } = useContext(NotesContext);
   function handleChecked() {
     try {
-      fetch(`http://localhost:1337/api/notes/${id}`),
+      fetch(`https://fearless-breeze-a96eff0fbb.strapiapp.com/api/notes/${id}`),
         {
           method: "PUT",
           body: JSON.stringify({
